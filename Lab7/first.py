@@ -1,6 +1,6 @@
 import cv2, math
 
-def draw_line(rho, theta, img, color=(255, 255, 255), thickness = 1, lineType = cv2.LINE_AA):
+def draw_line(rho, theta, img, color=(255, 255, 255), thickness = 15, lineType = cv2.LINE_AA):
     cos_t = math.cos(theta)
     sin_t = math.sin(theta)
     x0 = cos_t * rho
