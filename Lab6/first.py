@@ -2,14 +2,13 @@ import cv2, numpy as np
 from math import pi
 path = './Lab6/6-1.png'
 
-
 img = cv2.imread(path, flags = cv2.IMREAD_GRAYSCALE)
 
 img2 = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
 
 threshold, img = cv2.threshold(img, 127, 255, type = cv2.THRESH_BINARY)
 
-ans = cv2.findContours(img, mode = cv2.RETR_TREE, method = cv2.CHAIN_APPROX_SIMPLE)
+ans = cv2.findContours(img, mode = cv2.RETR_CCOMP, method = cv2.CHAIN_APPROX_SIMPLE)
 contours, hierarchy = ans
 
 # cv2.drawContours(img2, contours, contourIdx= -1, color = [255, 0, 255], thickness = 1, lineType = cv2.LINE_8)
