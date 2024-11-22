@@ -1,4 +1,4 @@
-import cv2, numpy as np
+import cv2
 from math import pi
 
 def draw_line(x0, y0, x1, y1, img, color = (0, 139, 0), thickness = 3, lineType = cv2.LINE_8):
